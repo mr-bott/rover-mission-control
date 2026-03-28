@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project simulates the navigation of robotic rovers on a rectangular plateau, inspired by a classic problem often used in backend and system design interviews.
+This project simulates the navigation of robotic rovers on a rectangular plateau.
 
 Each rover:
 
