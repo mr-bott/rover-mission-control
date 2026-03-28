@@ -1,0 +1,14 @@
+class Plateau:
+
+    #Represents the plateau (grid) where rovers can move.
+    #Responsible only for boundary validation.
+
+    def __init__(self, max_x: int, max_y: int):
+        self.max_x = max_x
+        self.max_y = max_y
+
+
+    def is_within_bounds(self, x: int, y: int) -> bool:
+        #Check if given coordinates are within plateau limits are not .
+        
+        return 0 <= x <= self.max_x and 0 <= y <= self.max_y
