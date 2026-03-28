@@ -43,7 +43,7 @@ def main():
         # Handle end-of-file (useful when input is piped from file)
         pass
     
-    print("Final Coordinates: \n")
+    # print("Final Coordinates: \n")
     # Print final positions of all rovers
     for result in results:
         print(result)
