@@ -4,7 +4,7 @@ from rover import Rover
 
 def main():
 
-    print("Enter Plateau size and Coordinates and commands: \n")
+    # print("Enter Plateau size and Coordinates and commands: \n")
 
     #Take map size and store it (lower side assumed to be 0,0 )
     max_x, max_y = map(int, input().split())
@@ -17,23 +17,23 @@ def main():
 
         while True:
             
-            #Take rover initial position (x, y, and direction)
+            # Take rover initial position (x, y, and direction)
             position_input = input().strip()
 
-            #Stop if no more input provided
+            # Stop if no more input provided
             if not position_input:
                 break
 
             x, y, direction = position_input.split()
             x, y = int(x), int(y)
 
-            #Take movement commands (L, R, M)
+            # Take movement commands (L, R, M)
             commands = input().strip()
 
-            #Create a rover instance with provided details
+            # Create a rover instance with provided details
             rover = Rover(x, y, direction, plateau)
 
-            #Execute all commands
+            # Execute all commands
             rover.execute_commands(commands)
 
             #Save final position
@@ -44,11 +44,11 @@ def main():
         pass
     
     print("Final Coordinates: \n")
-    #Print final positions of all rovers
+    # Print final positions of all rovers
     for result in results:
         print(result)
 
 
 if __name__ == "__main__":
-    #Entry point of the program
+    # Entry point of the program
     main()

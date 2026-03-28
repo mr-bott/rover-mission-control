@@ -10,7 +10,7 @@ class Rover:
     Handles:
     - Direction changes (L, R), Movement (M) and command execution.
     """
-    
+
     def __init__(self, x: int, y: int, direction: str, plateau: Plateau):
         #Current position of the rover
         self.x = x
@@ -19,21 +19,21 @@ class Rover:
         #Current facing directionn of the rover (N, E, S, W)
         self.direction = direction
 
-        #plateau for boundary validation
+        # plateau for boundary validation
         self.plateau = plateau
 
     def turn_left(self):
-        #Rotate rover 90 degrees to left.
+        # Rotate rover 90 degrees to left.
         idx = DIRECTIONS.index(self.direction)
 
-        #Rotate left: decrement index and use modulo to wrap (N -> W)
+        # Rotate left: decrement index and use modulo to wrap (N -> W)
         self.direction = DIRECTIONS[(idx - 1) % 4]
 
     def turn_right(self):
-        #Rotate rover 90 degrees to Right.
+        # Rotate rover 90 degrees to Right.
         idx = DIRECTIONS.index(self.direction)
 
-        #Rotate Right: increment index and use modulo to wrap (N -> S)
+        # Rotate Right: increment index and use modulo to wrap (N -> S)
         self.direction = DIRECTIONS[(idx + 1) % 4]
 
     def move(self):
@@ -61,5 +61,5 @@ class Rover:
                 raise ValueError(f"Invalid command: {command}")
 
     def get_position(self) -> str:
-        #Get current position and direction as string
+        # Get current position and direction as string
         return f"{self.x} {self.y} {self.direction}"
